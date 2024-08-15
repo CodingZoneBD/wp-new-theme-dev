@@ -20,8 +20,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <a href="/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png"
-                            alt="<?php echo get_bloginfo('name'); ?>">
+                        <img src="<?php echo get_theme_mod('nsit_logo') ?>" alt="<?php echo get_bloginfo('name'); ?>">
                     </a>
                 </div>
                 <div class="col-md-9"></div>

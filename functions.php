@@ -40,11 +40,12 @@ function nsit_customactizar_register($wp_customize)
     ));
 
     $wp_customize->add_setting('nsit_logo', array(
-        'default' => get_bloginfo( 'template_directory','/assets/img/logo.png'),
+        'default' => get_bloginfo('template_directory') . '/assets/img/logo.png',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nsit_logo', array(
-        'label' => __('Logo', 'artseaiartgenerator'),
+        'label' => __('Logo Upload', 'artseaiartgenerator'),
+        'description' => __('You can change your logo', 'artseaiartgenerator'),
         'section' => 'nsit_header_section',
         'settings' => 'nsit_logo',
     )));
