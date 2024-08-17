@@ -49,3 +49,8 @@ function nsit_pagination(){
         echo $pages . paginate_links($args);
         if ($max > 1 ) echo '</div><pre>';
 }
+
+
+function nsit_get_icon_svg( $group, $icon, $size = 24 ) {
+	return Nsit_SVG_Icons::get_svg( $group, $icon, $size );
+}
