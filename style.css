@@ -20,7 +20,30 @@ Artse AI Art Generator is distributed under the terms of the GNU GPL.
  Common CSS
 ========================================*/
 body {
-    font-family: "Kaisei Decol", serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
+}
+
+a.read-more {
+    background: #ea1a70;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: navajowhite;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+a.read-more:hover {
+    background: #262626;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    line-height: 1.5em;
 }
 
 h1,
@@ -190,6 +213,88 @@ img {
 
 #header_area.center_menu .col-md-9 ul ul {
     text-align: left;
+}
+
+
+/*=======================================
+ Index Page Style
+========================================*/
+#body_area {
+    padding: 45px 0;
+}
+
+#body_area .blog_area {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#body_area .post_thumb {
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#body_area .post_thumb img {
+    transition: 0.5s;
+    width: 100%;
+    display: block;
+}
+
+#body_area .post_thumb:hover img {
+    transform: scale(1.1);
+}
+
+#body_area .post_details {
+    width: 100%;
+}
+
+#body_area .post_details h2 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+#body_area .post_details h2 a {
+    color: #262626;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+#body_area .post_details h2 a:hover {
+    color: #ea1a70;
+}
+
+
+
+/*===========================================
+  Pagenav Area Styling
+===========================================*/
+#page_nav {}
+
+#page_nav p.pages {
+    background: #ea1a70;
+    color: #fff;
+    padding: 5px 10px;
+}
+
+#page_nav p.pages span {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+#page_nav .page-numbers {
+    background: #ea1a70;
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+
+#page_nav .page-numbers.current,
+#page_nav .page-numbers:hover {
+    background: #262626;
 }
 
 /*===========================================

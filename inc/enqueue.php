@@ -24,7 +24,7 @@ add_action(
 // Google Fonts Enqueue
 function nsit_add_google_fonts()
 {
-    wp_enqueue_style('nsit_google_fonts', 'https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Oswald:wght@200..700&display=swap', false);
+    wp_enqueue_style('ali_google_fonts', 'https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@400;700&display=swap', false);
 }
 
 add_action(
