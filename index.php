@@ -1,34 +1,16 @@
-<?php
-/*
- * This template for displaying the header
- */
+<?php get_header(); ?>
 
-?>
-
-<!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
-
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php wp_head(); ?>
-</head>
-
-<body <?php body_class(); ?>>
-    <div id="header_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3">
-                    <a href="/">
-                        <img src="<?php echo get_theme_mod('nsit_logo') ?>" alt="<?php echo get_bloginfo('name'); ?>">
-                    </a>
-                </div>
-                <div class="col-md-9"></div>
+<section id="body_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <?php the_content(); ?>
+            </div>
+            <div class="col-md-3">
+                <h2>This is sidebar</h2>
             </div>
         </div>
     </div>
+</section>
 
-    <?php wp_footer(); ?>
-</body>
-
-</html>
+<?php get_footer(); ?>
