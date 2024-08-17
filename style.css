@@ -234,7 +234,7 @@ body {
   /*===========================================
     Archive Styling
   ===========================================*/
-  #archive_title {
+  #archive_title, #search_title {
     background: #ea1a70;
     padding: 15px;
     margin-bottom: 20px;
