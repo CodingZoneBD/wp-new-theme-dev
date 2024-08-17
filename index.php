@@ -1,23 +1,16 @@
-    <?php
+<?php get_header(); ?>
 
-    /**
-     * Theme Header
-     */
-    get_header();
-    ?>
-
-
-    <section id="body_area">
-        <div class="container">
-            <div class="row">
+<section id="body_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
                 <?php the_content(); ?>
             </div>
+            <div class="col-md-3">
+                <h2>This is sidebar</h2>
+            </div>
         </div>
-    </section>
-    <?php
-    /**
-     * Theme Footer
-     */
-    get_footer();
+    </div>
+</section>
 
-    ?>
+<?php get_footer(); ?>
