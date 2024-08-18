@@ -9,7 +9,8 @@
 add_theme_support('title-tag');
 
 // Thumbnil Image Area
-add_theme_support('post-thumbnails', array('page', 'post', 'service'));
+add_theme_support('post-thumbnails', array('page', 'post', 'service', 'slider'));
+add_image_size('slider', 1920, 600, true);
 add_image_size('service', 390, 250, true);
 add_image_size('post-thumbnails', 970, 350, true);
 
