@@ -1,28 +1,44 @@
-# Ignore everything
-*
-# But descend into directories
-!*/
-
-# # Recursively allow files under:
-# "mu-plugins", "plugins", "themes" directory
-!/wp-content/mu-plugins/**
-!/wp-content/plugins/**
-!/wp-content/themes/**
-
-# ignore this file
-wp-content/themes/index.php
-
-# ignore specific themes
-wp-content/themes/twenty*/
-
-# ignore node dependency directories
+# ignore node dependency directories (used by grunt)
 node_modules/
+
+
+# ignore Editor files
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+*.codekit3
+.idea
 
 # ignore log files and databases
 *.log
 *.sql
 *.sqlite
-*.DS_Store
 
-# don't ignore this file
+# ignore compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# ignore packaged files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# -------------------------
+# BEGIN Whitelisted Files
+# -------------------------
+
+# track these files, if they exist
 !.gitignore
+!.editorconfig
+!.scss-lint.yml
+!README.md
+!CHANGELOG.md
