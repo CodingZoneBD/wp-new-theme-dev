@@ -13,6 +13,9 @@ include_once('inc/enqueue.php');
 //Theme Functions
 include_once('inc/theme_function.php');
 
+//Addin Cutom post
+include_once('inc/custom_post.php');
+
 
 // Menu  Register Function
 include_once('inc/menu_register.php');
