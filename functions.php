@@ -22,3 +22,6 @@ include_once('inc/menu_register.php');
 
 // WP Widgets Register Function
 include_once('inc/widgets_register.php');
+
+// WP Shortcode Register Function
+include_once('inc/shortcode.php');
