@@ -10,15 +10,12 @@ include_once('inc/default.php');
 // Theme css and jQuery files calling
 include_once('inc/enqueue.php');
 
-// Theme css and Login files calling
-include_once('inc/login-enqueue.php');
 
 //Theme Functions
 include_once('inc/theme_function.php');
 
 //Addin Cutom post
 include_once('inc/custom_post.php');
-
 
 // Menu  Register Function
 include_once('inc/menu_register.php');
@@ -28,3 +25,9 @@ include_once('inc/widgets_register.php');
 
 // WP Shortcode Register Function
 include_once('inc/shortcode.php');
+
+// Theme css and Login files calling
+include_once('inc/login_enqueue.php');
+
+// Custom Theme Options
+include_once('inc/theme-option/admin_theme_option.php');
