@@ -9,7 +9,7 @@ get_header(); ?>
       <div class="row">
         <div class="col-md-9">
             <div id="search_title">
-              <h1 class="title"><?php printf( __( 'Search Results for: %s', 'alihossain'), get_search_query()); ?></h1>
+              <h1 class="title"><?php printf( __( 'Search Results for: %s', 'artse-ai-art-generator'), get_search_query()); ?></h1>
             </div>
 
             <?php get_template_part('templates_parts/blog_setup'); ?>

@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p><?php echo get_theme_mod('nsit_copyright_section'); ?></p>
+                    <p><?php echo esc_html(get_theme_mod('nsit_copyright_section')); ?></p>
                 </div>
             </div>
         </div>

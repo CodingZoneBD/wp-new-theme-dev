@@ -5,7 +5,7 @@
 // {
 //     register_nav_menus(
 //         array(
-//             'primary_menu' => __('Primary Menu', 'artseaiartgenerator'),
+//             'primary_menu' => __('Primary Menu', 'artse-ai-art-generator'),
 //         )
 //     );
 // }
@@ -13,7 +13,7 @@
 // add_action('init', 'nsit_menus');
 
 // Menu Register
-register_nav_menu('main_menu', __('Main Menu', 'artseaiartgenerator'));
+register_nav_menu('main_menu', __('Main Menu', 'artse-ai-art-generator'));
 
 
 // Walker Menu Properties

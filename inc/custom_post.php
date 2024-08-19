@@ -1,93 +1,74 @@
 <?php
+/*
+Plugin Name: Artse Custom Post Types
+Description: Registers custom post types for Sliders and Services.
+Version: 1.0
+Author: Your Name
+*/
 
-/**
- * This function is used to add custom post type
- */
-
-function custom_service()
-{
-    register_post_type('service', array(
-        'labels' => array(
-            'name' => __('Services', 'artseaiartgenerator'),
-            'singular_name' => __('Service', 'artseaiartgenerator'),
-            'add_new' => __('Add New Service', 'artseaiartgenerator'),
-            'add_new_item' => __('Add New Service', 'artseaiartgenerator'),
-            'edit_item' => __('Edit Service', 'artseaiartgenerator'),
-            'new_item' => __('New Service', 'artseaiartgenerator'),
-            'view_item' => __('View Service', 'artseaiartgenerator'),
-            'search_items' => __('Search Service', 'artseaiartgenerator'),
-            'not_found' => __('No Service found', 'artseaiartgenerator'),
-            'not_found_in_trash' => __('No Service found in Trash', 'artseaiartgenerator'),
-            'parent_item_colon' => __('Parent Service', 'artseaiartgenerator'),
-        ),
-        'menu_icon' => 'dashicons-networking',
-        'public' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => true,
-        'menu_position' => 5,
-        'has_archive' => true,
-        'hierarchical' => true,
-        'show_ui' => true,
-        'capitalize_type' => 'post',
-        'taxonomies' => array('category', 'post_tag'),
-        'rewrite' => array(
-            'slug' => 'service',
-        ),
-        'supports' => array(
-            'title',
-            'editor',
-            'thumbnail',
-            'excerpt',
-        ),
-    ));
+function custom_slider() {
+    register_post_type(
+        'slider',
+        array(
+            'labels' => array(
+                'name' => __('Sliders', 'artse-ai-art-generator'),
+                'singular_name' => __('Slider', 'artse-ai-art-generator'),
+                'add_new' => __('Add New Slider', 'artse-ai-art-generator'),
+                'add_new_item' => __('Add New Slider', 'artse-ai-art-generator'),
+                'edit_item' => __('Edit Slider', 'artse-ai-art-generator'),
+                'new_item' => __('New Slider', 'artse-ai-art-generator'),
+                'view_item' => __('View Slider', 'artse-ai-art-generator'),
+                'not_found' => __('Sorry, we couldn\'t find the Slider you are looking for.', 'artse-ai-art-generator'),
+            ),
+            'menu_icon' => 'dashicons-format-gallery',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => true,
+            'menu_position' => 5,
+            'has_archive' => true,
+            'hierarchical' => true,
+            'show_ui' => true,
+            'capability_type' => 'post',
+            'rewrite' => array('slug' => 'slider'),
+            'supports' => array('title', 'thumbnail', 'editor', 'excerpt'),
+        )
+    );
+    add_theme_support('post-thumbnails');
 }
-
-
-add_action('init', 'custom_service');
-
-function custom_slider()
-{
-    register_post_type('slider', array(
-        'labels' => array(
-            'name' => __('Sliders', 'artseaiartgenerator'),
-            'singular_name' => __('Slider', 'artseaiartgenerator'),
-            'add_new' => __('Add New Slider', 'artseaiartgenerator'),
-            'add_new_item' => __('Add New Slider', 'artseaiartgenerator'),
-            'edit_item' => __('Edit Slider', 'artseaiartgenerator'),
-            'new_item' => __('New Slider', 'artseaiartgenerator'),
-            'view_item' => __('View Slider', 'artseaiartgenerator'),
-            'search_items' => __('Search Slider', 'artseaiartgenerator'),
-            'not_found' => __('No Slider found', 'artseaiartgenerator'),
-            'not_found_in_trash' => __('No Slider found in Trash', 'artseaiartgenerator'),
-            'parent_item_colon' => __('Parent Slider', 'artseaiartgenerator'),
-        ),
-        'menu_icon' => 'dashicons-slides',
-        'public' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => true,
-        'menu_position' => 6,
-        'has_archive' => true,
-        'hierarchical' => true,
-        'show_ui' => true,
-        'capitalize_type' => 'post',
-        'taxonomies' => array('category', 'post_tag'),
-        'rewrite' => array(
-            'slug' => 'slider',
-        ),
-        'supports' => array(
-            'title',
-            'editor',
-            'thumbnail',
-            'excerpt',
-        ),
-    ));
-}
-
-
 add_action('init', 'custom_slider');
 
-function query_post_type($query)
-{
+function custom_service() {
+    register_post_type(
+        'service',
+        array(
+            'labels' => array(
+                'name' => __('Services', 'artse-ai-art-generator'),
+                'singular_name' => __('Service', 'artse-ai-art-generator'),
+                'add_new' => __('Add New Service', 'artse-ai-art-generator'),
+                'add_new_item' => __('Add New Service', 'artse-ai-art-generator'),
+                'edit_item' => __('Edit Service', 'artse-ai-art-generator'),
+                'new_item' => __('New Service', 'artse-ai-art-generator'),
+                'view_item' => __('View Service', 'artse-ai-art-generator'),
+                'not_found' => __('Sorry, we couldn\'t find the service you are looking for.', 'artse-ai-art-generator'),
+            ),
+            'menu_icon' => 'dashicons-networking',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => true,
+            'menu_position' => 5,
+            'has_archive' => true,
+            'hierarchical' => true,
+            'show_ui' => true,
+            'capability_type' => 'post',
+            'rewrite' => array('slug' => 'service'),
+            'supports' => array('title', 'thumbnail', 'editor', 'excerpt'),
+        )
+    );
+    add_theme_support('post-thumbnails');
+}
+add_action('init', 'custom_service');
+
+function query_post_type($query) {
     if (is_category()) {
         $post_type = get_query_var('post_type');
         if ($post_type) {

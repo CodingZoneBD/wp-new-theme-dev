@@ -14,5 +14,5 @@
         </div>
 <?php endwhile;
 else :
-    _e('No post found');
+    _e('No post found', 'artse-ai-art-generator');
 endif; ?>

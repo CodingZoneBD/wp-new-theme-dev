@@ -18,12 +18,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <header id="header_area" class="bg-body-tertiary <?php echo get_theme_mod('nsit_menu_position'); ?>">
+    <header id='header_area' class='bg-body-tertiary <?php echo esc_attr(get_theme_mod('nsit_menu_position')); ?>'>
         <div class="container">
             <div class="row">
                 <div class="col-md-3 d-flex align-items-center justify-content-center">
-                    <a href="<?= home_url(); ?>">
-                        <img src="<?php echo get_theme_mod('nsit_logo') ?>" alt="<?php echo get_bloginfo('name'); ?>">
+                    <a href="<?php echo home_url(); ?>">
+                    <img src='<?php echo esc_url(get_theme_mod('nsit_logo')); ?>' alt='<?php echo esc_attr(get_bloginfo('name')); ?>'>
                     </a>
                 </div>
                 <div class="col-md-9">

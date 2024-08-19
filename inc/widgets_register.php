@@ -3,9 +3,9 @@
 function nsit_widgets_register()
 {
     register_sidebar(array(
-        'name' => __('Main Widget Area', 'artseaiartgenerator'),
+        'name' => __('Main Widget Area', 'artse-ai-art-generator'),
         'id' => 'sidebar-1',
-        'description' => __('Appears in the sidebar', 'artseaiartgenerator'),
+        'description' => __('Appears in the sidebar', 'artse-ai-art-generator'),
         'before_widget' => '<div class="child_sidebar">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="title">',
@@ -13,9 +13,9 @@ function nsit_widgets_register()
     ));
 
     register_sidebar(array(
-        'name' => __('Footer 1', 'artseaiartgenerator'),
+        'name' => __('Footer 1', 'artse-ai-art-generator'),
         'id' => 'footer-1',
-        'description' => __('Appears in the sidebar', 'artseaiartgenerator'),
+        'description' => __('Appears in the sidebar', 'artse-ai-art-generator'),
         'before_widget' => '<div class="child_sidebar">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="title">',
@@ -23,9 +23,9 @@ function nsit_widgets_register()
     ));
 
     register_sidebar(array(
-        'name' => __('Footer 2', 'artseaiartgenerator'),
+        'name' => __('Footer 2', 'artse-ai-art-generator'),
         'id' => 'footer-2',
-        'description' => __('Appears in the sidebar', 'artseaiartgenerator'),
+        'description' => __('Appears in the sidebar', 'artse-ai-art-generator'),
         'before_widget' => '<div class="child_sidebar">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="title">',
@@ -33,9 +33,9 @@ function nsit_widgets_register()
     ));
 
     register_sidebar(array(
-        'name' => __('Footer 3', 'artseaiartgenerator'),
+        'name' => __('Footer 3', 'artse-ai-art-generator'),
         'id' => 'footer-3',
-        'description' => __('Appears in the sidebar', 'artseaiartgenerator'),
+        'description' => __('Appears in the sidebar', 'artse-ai-art-generator'),
         'before_widget' => '<div class="child_sidebar">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="title">',
@@ -43,9 +43,9 @@ function nsit_widgets_register()
     ));
 
     register_sidebar(array(
-        'name' => __('Home Page widget', 'artseaiartgenerator'),
+        'name' => __('Home Page widget', 'artse-ai-art-generator'),
         'id' => 'home-1',
-        'description' => __('Appears in the sidebar', 'artseaiartgenerator'),
+        'description' => __('Appears in the sidebar', 'artse-ai-art-generator'),
         'before_widget' => '<div class="child_home">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="title">',

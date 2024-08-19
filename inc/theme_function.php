@@ -5,17 +5,17 @@ function nsit_customizar_register($wp_customize)
 {
     // Header Section
     $wp_customize->add_section('nsit_header_area', array(
-        'title' => __('Header Area', 'artseaiartgenerator'),
-        'description' => __('You can change the header section', 'artseaiartgenerator'),
+        'title' => __('Header Area', 'artse-ai-art-generator'),
+        'description' => __('You can change the header section', 'artse-ai-art-generator'),
     ));
 
     $wp_customize->add_setting('nsit_logo', array(
-        'default' => get_bloginfo('template_directory') . '/assets/img/logo.png',
+        'default' => esc_url( get_template_directory_uri() ) . '/assets/img/logo.png',
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'nsit_logo', array(
-        'label' => __('Logo Upload', 'artseaiartgenerator'),
-        'description' => __('You can change your logo', 'artseaiartgenerator'),
+        'label' => __('Logo Upload', 'artse-ai-art-generator'),
+        'description' => __('You can change your logo', 'artse-ai-art-generator'),
         'section' => 'nsit_header_area',
         'settings' => 'nsit_logo',
     )));
@@ -23,8 +23,8 @@ function nsit_customizar_register($wp_customize)
 
     // Footer Section
     $wp_customize->add_section('nsit_footer_option', array(
-        'title' => __('Footer Area', 'artseaiartgenerator'),
-        'description' => __('You can change the footer settings', 'artseaiartgenerator'),
+        'title' => __('Footer Area', 'artse-ai-art-generator'),
+        'description' => __('You can change the footer settings', 'artse-ai-art-generator'),
     ));
 
     $wp_customize->add_setting('nsit_copyright_section', array(
@@ -32,8 +32,8 @@ function nsit_customizar_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'nsit_copyright_section', array(
-        'label' => __('Copyright text', 'artseaiartgenerator'),
-        'description' => __('You can change the footer copyright', 'artseaiartgenerator'),
+        'label' => __('Copyright text', 'artse-ai-art-generator'),
+        'description' => __('You can change the footer copyright', 'artse-ai-art-generator'),
         'settings' => 'nsit_copyright_section',
         'section' => 'nsit_footer_option',
     )));
@@ -41,8 +41,8 @@ function nsit_customizar_register($wp_customize)
 
     // Menu Function
     $wp_customize->add_section('nsit_menu_option', array(
-        'title' => __('Menu Position Option', 'artseaiartgenerator'),
-        'description' => __('You can change the menu position option do it', 'artseaiartgenerator'),
+        'title' => __('Menu Position Option', 'artse-ai-art-generator'),
+        'description' => __('You can change the menu position option do it', 'artse-ai-art-generator'),
     ));
 
     $wp_customize->add_setting('nsit_menu_position', array(
@@ -50,22 +50,22 @@ function nsit_customizar_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'nsit_menu_position', array(
-        'label' => __('Menu Position', 'artseaiartgenerator'),
-        'description' => __('You can change the menu position', 'artseaiartgenerator'),
+        'label' => __('Menu Position', 'artse-ai-art-generator'),
+        'description' => __('You can change the menu position', 'artse-ai-art-generator'),
         'section' => 'nsit_menu_option',
         'settings' => 'nsit_menu_position',
         'type' => 'radio',
         'choices' => array(
-            'left_menu' => __('Left Menu', 'artseaiartgenerator'),
-            'right_menu' => __('Right Menu', 'artseaiartgenerator'),
-            'center_menu' => __('Center Menu', 'artseaiartgenerator'),
+            'left_menu' => __('Left Menu', 'artse-ai-art-generator'),
+            'right_menu' => __('Right Menu', 'artse-ai-art-generator'),
+            'center_menu' => __('Center Menu', 'artse-ai-art-generator'),
         )
     )));
 
     // Theme Color
     $wp_customize->add_section('nsit_theme_color', array(
-        'title' => __('Theme Color', 'artseaiartgenerator'),
-        'description' => __('You can change the theme color', 'artseaiartgenerator'),
+        'title' => __('Theme Color', 'artse-ai-art-generator'),
+        'description' => __('You can change the theme color', 'artse-ai-art-generator'),
     ));
 
     $wp_customize->add_setting('nsit_bg_color', array(
@@ -73,8 +73,8 @@ function nsit_customizar_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'nsit_bg_color', array(
-        'label' => __('Background Color', 'artseaiartgenerator'),
-        'description' => __('You can change the background color', 'artseaiartgenerator'),
+        'label' => __('Background Color', 'artse-ai-art-generator'),
+        'description' => __('You can change the background color', 'artse-ai-art-generator'),
         'section' => 'nsit_theme_color',
         'settings' => 'nsit_bg_color',
     )));
@@ -84,8 +84,8 @@ function nsit_customizar_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'nsit_primary_color', array(
-        'label' => __('Primary Color', 'artseaiartgenerator'),
-        'description' => __('You can change the link color', 'artseaiartgenerator'),
+        'label' => __('Primary Color', 'artse-ai-art-generator'),
+        'description' => __('You can change the link color', 'artse-ai-art-generator'),
         'section' => 'nsit_theme_color',
         'settings' => 'nsit_primary_color',
     )));
@@ -99,10 +99,11 @@ function nsit_theme_color_cus()
 ?>
     <style>
         body {
-            background: <?php echo get_theme_mod('nsit_bg_color'); ?>
+            background: <?php echo esc_attr(get_theme_mod('nsit_bg_color')); ?>;
         }
+
         :root {
-            --primary: <?php echo get_theme_mod('nsit_primary_color'); ?>
+            --primary: <?php echo esc_attr(get_theme_mod('nsit_primary_color')); ?>;
         }
     </style>
 <?php

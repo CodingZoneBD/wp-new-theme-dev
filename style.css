@@ -10,7 +10,7 @@ Requires PHP: 5.6
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: artseaiartgenerator
+Text Domain: artse-ai-art-generator
 Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, style-variations, wide-blocks, block-styles, accessibility-ready, blog, portfolio, news
 
 Artse AI Art Generator NameSpaceIT Theme, (C) 2021 NameSpaceIT.com
@@ -68,6 +68,9 @@ input[type="submit"].submit:hover {
   border-radius: 5px;
   display: inline-block;
   text-decoration: none;
+}
+.slicknav_menu{
+  display: none;
 }
 /*=======================================
  Header Area Style
@@ -226,10 +229,6 @@ input[type="submit"].submit:hover {
 #body_area .post_details {
   width: 100%;
 }
-#body_area .post_details p span{
-  display: inline-block;
-  margin: 0 5px;
-}
 #body_area .post_details div {
   width: 100% !important;
 }
@@ -265,10 +264,10 @@ input[type="submit"].submit:hover {
 /*===========================================
   Slider Area Styling
 ===========================================*/
-#slider_area {
+#slider_area{
   margin: 25px 0;
 }
-#slider_area img {
+#slider_area img{
   width: 100%;
   height: auto;
 }
@@ -331,8 +330,7 @@ input[type="submit"].submit:hover {
 .child_sidebar {
   margin-bottom: 20px;
 }
-.child_sidebar h2,
-.child_sidebar .wp-block-search__label {
+.child_sidebar h2, .child_sidebar .wp-block-search__label {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 30px;
@@ -428,27 +426,6 @@ input[type="submit"].submit:hover {
   background: #262626;
 }
 
-/*===========================================
-  Homepage category Styling
-===========================================*/
-#homepage_post .child_home ul {
-  text-align: center;
-}
-#homepage_post .child_home ul li {
-  display: inline-block;
-  background: #fff;
-  padding: 10px;
-  box-shadow: 0 0 10px #ddd;
-  margin: 0 10px;
-  border-radius: 10px;
-}
-#homepage_post .child_home ul li a {
-  font-size: 25px;
-  color: #262626;
-  display: block;
-  margin: 15px 0;
-  text-decoration: none;
-}
 /*===========================================
   Footer Area Styling
 ===========================================*/

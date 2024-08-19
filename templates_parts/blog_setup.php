@@ -19,11 +19,11 @@
     </div>
 <?php endwhile;
 else :
-  _e('No post found');
+  _e('No post found', 'artse-ai-art-generator');
 endif; ?>
 <div id="page_nav">
-  <?php if ('ali_pagenav') {
-    ali_pagenav();
+  <?php if ('nsit_pagination') {
+    nsit_pagination();
   } else { ?>
     <?php next_posts_link(); ?>
     <?php previous_posts_link(); ?>

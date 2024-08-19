@@ -27,7 +27,8 @@ add_action('after_setup_theme', 'my_theme_setup');
 // Customize the "Read More" link
 function nsit_excerpt_more($more)
 {
-    return '<br> <br> <a class="read-more" href="' . get_permalink() . '">' . 'Read More' . '</a>';
+    global $post;
+    return '<br> <br> <a class="read-more" href="' . get_permalink($post->ID) . '">' . 'Read More' . '</a>';
 }
 add_filter('excerpt_more', 'nsit_excerpt_more');
 
