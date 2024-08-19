@@ -6,7 +6,8 @@ Version: 1.0
 Author: Your Name
 */
 
-function custom_slider() {
+function custom_slider()
+{
     register_post_type(
         'slider',
         array(
@@ -37,7 +38,8 @@ function custom_slider() {
 }
 add_action('init', 'custom_slider');
 
-function custom_service() {
+function custom_service()
+{
     register_post_type(
         'service',
         array(
@@ -68,7 +70,40 @@ function custom_service() {
 }
 add_action('init', 'custom_service');
 
-function query_post_type($query) {
+function custom_project()
+{
+    register_post_type(
+        'project',
+        array(
+            'labels' => array(
+                'name' => __('Projects', 'artse-ai-art-generator'),
+                'singular_name' => __('Project', 'artse-ai-art-generator'),
+                'add_new' => __('Add New Project', 'artse-ai-art-generator'),
+                'add_new_item' => __('Add New Project', 'artse-ai-art-generator'),
+                'edit_item' => __('Edit Project', 'artse-ai-art-generator'),
+                'new_item' => __('New Project', 'artse-ai-art-generator'),
+                'view_item' => __('View Project', 'artse-ai-art-generator'),
+                'not_found' => __('Sorry, we couldn\'t find the Project you are looking for.', 'artse-ai-art-generator'),
+            ),
+            'menu_icon' => 'dashicons-calendar-alt',
+            'public' => true,
+            'publicly_queryable' => true,
+            'exclude_from_search' => true,
+            'menu_position' => 5,
+            'has_archive' => true,
+            'hierarchical' => true,
+            'show_ui' => true,
+            'capability_type' => 'post',
+            'rewrite' => array('slug' => 'project'),
+            'supports' => array('title', 'thumbnail', 'editor', 'excerpt'),
+        )
+    );
+    add_theme_support('post-thumbnails');
+}
+add_action('init', 'custom_project');
+
+function query_post_type($query)
+{
     if (is_category()) {
         $post_type = get_query_var('post_type');
         if ($post_type) {
