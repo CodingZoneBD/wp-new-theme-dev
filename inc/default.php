@@ -14,6 +14,14 @@ add_image_size('slider', 1920, 600, true);
 add_image_size('service', 390, 250, true);
 add_image_size('post-thumbnails', 970, 350, true);
 
+function my_theme_setup()
+{
+    add_theme_support('post-thumbnails');
+    add_theme_support('post-formats', ['aside ', 'gallery ', 'image', 'audio', 'video', 'chat']);
+}
+
+add_action('after_setup_theme', 'my_theme_setup');
+
 
 // Except to 40 Words
 // Customize the "Read More" link
