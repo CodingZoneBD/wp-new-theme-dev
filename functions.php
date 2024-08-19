@@ -10,6 +10,9 @@ include_once('inc/default.php');
 // Theme css and jQuery files calling
 include_once('inc/enqueue.php');
 
+// Theme css and Login files calling
+include_once('inc/login-enqueue.php');
+
 //Theme Functions
 include_once('inc/theme_function.php');
 
